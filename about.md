@@ -1,15 +1,15 @@
 ---
 layout: page
-title: About
+title: Обо мне
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](http://jekyllrb.com/)
-
-You can find the source code for the Jekyll new theme at:
-{% include icon-github.html username="jglovier" %} /
-[jekyll-new](https://github.com/jglovier/jekyll-new)
-
-You can find the source code for Jekyll at
-{% include icon-github.html username="jekyll" %} /
-[jekyll](https://github.com/jekyll/jekyll)
+<blockquote>
+Хочу поделиться радостью творчества. Моя профессия архитектор. Но пишу акварелью я уже давно, знакома с многими техниками и "секретами", и каждый раз, создавая что-то , открываю для себя все новые и новые приёмы и возможности. В отличие от масла или других любых "кроющих", глухих красок, акварель не прощает ошибок, любая попытка исправления заметна и губит главные достоинства акварели - свежесть, прозрачность, точность мазка ...
+Импровизация плюс навык и любовь к объекту изображения -
+тогда будут возможны результат, радость, вдохновение!
+<br/><br/>
+Обращайтесь, задавайте вопросы, заказывайте работы, делитесь впечатлениями, учитесь видеть красивое вокруг, ведь красота спасёт мир. Не так ли?
+<br/>
+<cite>Екатерина</cite>
+</blockquote>
