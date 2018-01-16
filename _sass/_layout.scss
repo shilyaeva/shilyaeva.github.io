@@ -8,6 +8,7 @@
 
     // Positioning context for the mobile navigation icon
     position: relative;
+
 }
 
 .site-title {
@@ -33,7 +34,7 @@
     }
 
     .page-link {
-        color: $text-color;
+        color: $grey-color-dark;
         line-height: $base-line-height;
 
         // Gaps between nav items, but not on the last one
@@ -109,6 +110,7 @@
 
 .contact-list,
 .social-media-list {
+    font-family: "Arial", sans-serif;
     list-style: none;
     margin-left: 0;
 }
@@ -127,18 +129,19 @@
 }
 
 .footer-col-1 {
-    width: -webkit-calc(35% - (#{$spacing-unit} / 2));
-    width:         calc(35% - (#{$spacing-unit} / 2));
+    width: -webkit-calc(33% - (#{$spacing-unit} / 2));
+    width:         calc(33% - (#{$spacing-unit} / 2));
 }
 
 .footer-col-2 {
-    width: -webkit-calc(20% - (#{$spacing-unit} / 2));
-    width:         calc(20% - (#{$spacing-unit} / 2));
+    width: -webkit-calc(33% - (#{$spacing-unit} / 2));
+    width:         calc(33% - (#{$spacing-unit} / 2));
 }
 
 .footer-col-3 {
-    width: -webkit-calc(45% - (#{$spacing-unit} / 2));
-    width:         calc(45% - (#{$spacing-unit} / 2));
+    text-align: right;
+    width: -webkit-calc(33% - (#{$spacing-unit} / 2));
+    width:         calc(33% - (#{$spacing-unit} / 2));
 }
 
 @include media-query($on-laptop) {
@@ -239,4 +242,19 @@
             font-size: 18px;
         }
     }
+}
+
+.social-icon {
+    text-align: center;
+    float: left;
+    width: 20px;
+    margin-right: 5px;
+    color: $grey-color-dark;
+}
+
+.home-banner {
+    height: 350px;
+    background-image: url("/assets/img/bg.jpg");
+    background-repeat: no-repeat;
+    background-position: center -70px; 
 }

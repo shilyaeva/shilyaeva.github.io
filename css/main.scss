@@ -6,21 +6,22 @@
 
 
 // Our variables
-$base-font-family: "Times", sans-serif;
-$base-font-size:   16px;
+// $base-font-family: "Times", sans-serif;
+$base-font-family: 'Cormorant Garamond', serif;
+$base-font-size:   18px;
 $base-font-weight: 400;
 $small-font-size:  $base-font-size * 0.875;
 $base-line-height: 1.5;
 
 $spacing-unit:     30px;
 
-$text-color:       #111;
+$text-color:       #000;
 $background-color: #fdfdfd;
 $brand-color:      #2a7ae2;
 
 $grey-color:       #828282;
 $grey-color-light: lighten($grey-color, 40%);
-$grey-color-dark:  darken($grey-color, 25%);
+$grey-color-dark:  #000;
 
 // Width of the content area
 $content-width:    800px;
@@ -72,38 +73,4 @@ $on-laptop:        800px;
 
 .my-gallery figcaption {
   display: none;
-}
-
-blockquote {
-    font-family: Georgia, serif;
-    font-size: 18px;
-    font-style: italic;
-    width: 500px;
-    margin: 0.25em 0;
-    padding: 0.35em 40px;
-    line-height: 1.45;
-    position: relative;
-    color: #383838;
-}
-
-blockquote:before {
-    display: block;
-    padding-left: 10px;
-    content: "\201C";
-    font-size: 80px;
-    position: absolute;
-    left: -20px;
-    top: -20px;
-    color: #7a7a7a;
-}
-
-blockquote cite {
-    color: #999999;
-    font-size: 14px;
-    display: block;
-    margin-top: 5px;
-}
-
-blockquote cite:before {
-    content: "\2014 \2009";
 }

@@ -2,19 +2,20 @@
 
   <div class="wrapper">
 
-    <h2 class="footer-heading">{{ site.title }}</h2>
+    <div class="footer-heading">
+      <div>{{ site.title }}</div>
+      <div>Акварель и графика. Работы на заказ.</div>
+    </div>
 
     <div class="footer-col-wrapper">
       <div class="footer-col footer-col-1">
         <ul class="contact-list">
           <li>
             <a href="mailto:{{ site.email }}">
-            <i class="fa fa-envelope" aria-hidden="true"></i> {{ site.email }}
-            </a>
-          </li>
-          <li>
-            <a href="https://vk.com/shilyaeva_art">
-            <i class="fa fa-vk" aria-hidden="true"></i> shilyaeva_art
+              <div class="social-icon">
+                <i class="fa fa-envelope" aria-hidden="true"></i>
+              </div>
+              {{ site.email }}
             </a>
           </li>
         </ul>
@@ -22,21 +23,35 @@
 
       <div class="footer-col footer-col-2">
         <ul class="social-media-list">
-          {% if site.github_username %}
           <li>
-            {% include icon-github.html username=site.github_username %}
+            <a href="https://www.instagram.com/shilyaeva_art">
+              <div class="social-icon">
+                <i class="fa fa-instagram" aria-hidden="true"></i>
+              </div>
+              instagram.com/shilyaeva_art
+            </a>
           </li>
-          {% endif %}
-
-          {% if site.twitter_username %}
-          <li>
-            {% include icon-twitter.html username=site.twitter_username %}
+           <li>
+            <a href="https://facebook.com/shilyaeva.art">
+              <div class="social-icon">
+                <i class="fa fa-facebook" aria-hidden="true"></i>
+              </div>
+              facebook.com/shilyaeva.art
+            </a>
           </li>
-          {% endif %}
+           <li>
+            <a href="https://vk.com/shilyaeva_art">
+              <div class="social-icon">
+                <i class="fa fa-vk" aria-hidden="true"></i>
+              </div>
+              vk.com/shilyaeva_art
+            </a>
+          </li>
         </ul>
       </div>
 
-      <div class="footer-col footer-col-3">
+      <div class="footer-col footer-col-3" style="font-family: 'Times', sans-serif">
+        <i class="fa fa-copyright" aria-hidden="true"></i> {{ site.time | date: '%Y' }} Екатерина Шиляева
       </div>
     </div>
 
