@@ -2,7 +2,10 @@
 
   <div class="wrapper">
 
-    <a class="site-title" href="{{ site.baseurl }}/">{{ site.title }}</a>
+    <!-- {% assign index_page = site.pages | where: "ref", 'index' | where: "lang", page.lang | first %} -->
+    <a class="site-title" href="{{ index_page.url }}">
+      {{ site.title[page.lang] | upcase }}
+    </a>
 
     <nav class="site-nav">
       <a href="#" class="menu-icon">
@@ -14,12 +17,29 @@
       </a>
 
       <div class="trigger">
-        {% assign sorted_pages = site.pages | sort:"order" %}
-        {% for my_page in sorted_pages %}
-          {% if my_page.title %}
-          <a class="page-link" href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a>
+
+        {% assign pages = site.pages | where: "lang", page.lang | sort: "order" %}
+        {% for p in pages %}
+          {% if p.title and p.ref != 'index' %}
+          <a class="page-link" href="{{ p.url | prepend: site.baseurl }}">{{ p.title }}</a>
           {% endif %}
         {% endfor %}
+
+        {% assign en_page = site.pages | where: "ref", page.ref | where: "lang", "en" | first %}
+        {% assign ru_page = site.pages | where: "ref", page.ref | where: "lang", "ru" | first %}
+
+        {% case page.lang %}
+          {% when 'en' %}
+            {% assign en_class = 'active' %}
+          {% when 'ru' %}
+            {% assign ru_class = 'active' %}
+        {% endcase %}
+        <div class="page-link" style="float: right;">
+          <a class="{{ en_class }}" href="{{ en_page.url | prepend: site.baseurl }}">en</a>
+          /
+          <a class="{{ ru_class }}" href="{{ ru_page.url | prepend: site.baseurl }}">ru</a>
+        </div>
+
       </div>
     </nav>
 

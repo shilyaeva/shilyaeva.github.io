@@ -1,7 +1,9 @@
-title: ЕКАТЕРИНА ШИЛЯЕВА
-email: shilyaeva.art@gmail.com
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://shilyaeva.art" # the base hostname & protocol for your site
-
-# Build settings
-markdown: kramdown
+url: "https://shilyaeva.art"
+title:
+  en: Ekaterina Shilyaeva
+  ru: Екатерина Шиляева
+slogan:
+  en: Watercolorist & graphic artist.
+  ru: Акварель и графика.
+email: mail@shilyaeva.art
+include: [ "_pages", _pages/en/", "_pages/ru/" ]

@@ -1,28 +1,35 @@
 <head>
   <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <meta name="description" content="Екатерина Шиляева. Картины. Акварель и графика. Работы на заказ. Санкт-Петербург Москва">
-  <meta  name="Keywords" content="акварель картины акварелью купить продажа" />
+  {% assign pages = site.pages | where: "ref", page.ref | sort: "lang" %}
+  {% for p in pages %}
+    <link rel="alternate" hreflang="{{ p.lang }}" href="{{ p.url }}"/>
+  {% endfor %}
 
-  <meta http-equiv="content-type" content="text/html;charset=UTF-8">
+  {% if page.description %}
+  <meta name="description" content="{{ page.description }}">
+  {% endif %}
 
-  <title>Shilyaeva Art{% if page.title %} | {{ page.title | escape }}{% endif %}</title>
-  <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+  <title>
+    {% if page.title %}
+      {{ page.title | escape }} |
+    {% endif %}
+    Shilyaeva Art
+  </title>
+
+  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 
   <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond" rel="stylesheet">
-
   <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
-  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
-
   <link rel="stylesheet" href="/css/photoswipe/photoswipe.css">
-  <link rel="stylesheet" href="/css/photoswipe/default-skin/default-skin.css"> 
-  <script src="/js/photoswipe/photoswipe.min.js"></script> 
-  <script src="/js/photoswipe/photoswipe-ui-default.min.js"></script> 
-
+  <link rel="stylesheet" href="/css/photoswipe/default-skin/default-skin.css">
   <link rel="stylesheet" href="/assets/font-awesome/css/font-awesome.min.css">
+
+  <script src="/js/photoswipe/photoswipe.min.js"></script>
+  <script src="/js/photoswipe/photoswipe-ui-default.min.js"></script>
 
   {% if jekyll.environment == 'production' %}
   {% include analytics.html %}

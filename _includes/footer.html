@@ -3,8 +3,8 @@
   <div class="wrapper">
 
     <div class="footer-heading">
-      <div>{{ site.title }}</div>
-      <div>Акварель и графика. Работы на заказ.</div>
+      <div>{{ site.title[page.lang] | upcase }}</div>
+      <div>{{ site.slogan[page.lang] }}</div>
     </div>
 
     <div class="footer-col-wrapper">
@@ -39,7 +39,8 @@
               facebook.com/shilyaeva.art
             </a>
           </li>
-           <li>
+          {% if page.lang == 'ru' %}
+          <li>
             <a href="https://vk.com/shilyaeva_art">
               <div class="social-icon">
                 <i class="fa fa-vk" aria-hidden="true"></i>
@@ -47,11 +48,12 @@
               vk.com/shilyaeva_art
             </a>
           </li>
+          {% endif %}
         </ul>
       </div>
 
       <div class="footer-col footer-col-3" style="font-family: 'Times', sans-serif">
-        <i class="fa fa-copyright" aria-hidden="true"></i> {{ site.time | date: '%Y' }} Екатерина Шиляева
+        <i class="fa fa-copyright" aria-hidden="true"></i> {{ site.time | date: '%Y' }} {{ site.title[page.lang] }}
       </div>
     </div>
 
